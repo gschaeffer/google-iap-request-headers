@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width; initial-scale=1">
+        <title>Display Headers</title>
+    </head>
+    <body style="font-family: arial, helvitica, Courier;">
+
+        <h1>{{ dt }}</h1>
+
+        <h2>Header Values</h2>
+        <table>
+            {% for i, (k, v) in enumerate(headers.items()): %}
+            <tr><td>{{ k }}</td><td>{{ v }}</td></tr>
+            {% endfor %}
+        </table>
+
+        <h2>Raw Headers</h2>
+        <p>{{ headers }}</p>
+        
+    </body>
+</html>
